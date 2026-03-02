@@ -1,5 +1,9 @@
 const axios = require("axios");
 
+function getCurrentTime() {
+  return new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false }).replace(',', '');
+}
+
 // Lưu lịch sử để tạo pattern
 let history = [];
 let fullHistory = [];
@@ -13,7 +17,7 @@ let latestResult = {
   "pattern": "",
   "phiên hiện tại(phiên trc+1)": 0,
   "chuỗi md5": "",
-  "time": new Date().toISOString().replace("T", " ").slice(0, 19),
+  "time": getCurrentTime(),
   "id": "Dwong1410"
 };
 
@@ -40,7 +44,7 @@ function updateResult(d1, d2, d3, sid = null) {
     const pattern = history.join("");
     const duDoanText = duDoan(pattern);
 
-    const timeStr = new Date().toISOString().replace("T", " ").slice(0, 19);
+    const timeStr = getCurrentTime();
     latestResult = {
       "Phiên trước": sid || latestResult["Phiên trước"] || 0,
       "xúc xắc 1": d1,

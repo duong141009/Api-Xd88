@@ -42,7 +42,7 @@ function generateFingerprint() {
 }
 
 function getCurrentTime() {
-  return new Date().toLocaleTimeString('vi-VN', { hour12: false });
+  return new Date().toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false });
 }
 
 function safeSend(message) {
