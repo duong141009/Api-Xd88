@@ -1,19 +1,16 @@
 {
-  "name": "api-all-game",
+  "name": "api-hitclub",
   "version": "1.0.0",
-  "description": "Tool API cho các game",
-  "main": "server.js",
+  "description": "Integrated API Tool for Hitclub (Bàn Xanh & MD5)",
+  "main": "server_xd88.js",
   "scripts": {
-    "start": "node server.js",
-    "start:unified": "node server.js",
-    "start:hitmd5": "node hitmd5.js",
-    "start:sun": "node sun.js"
+    "start": "node server_xd88.js"
   },
   "dependencies": {
-    "axios": "^1.6.0",
-    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "ws": "^8.16.0"
+    "cors": "^2.8.5",
+    "ws": "^8.16.0",
+    "axios": "^1.6.0"
   },
   "engines": {
     "node": ">=18.0.0"
